@@ -1,9 +1,12 @@
+"test case for EmotionDetection"
 import unittest
 
-from EmotionDetection.emotion_detection import emotion_detector
+from emotion_detection.emotion_detection import emotion_detector
 
 class TestEmotionDetection(unittest.TestCase):
+    "test EmotionDetection package"
     def test_result(self):
+        "result must be correct"
         self.assertEqual(
             emotion_detector("I am glad this happened")["dominant_emotion"],
             "joy"
